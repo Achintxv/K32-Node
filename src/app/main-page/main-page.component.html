@@ -1,0 +1,57 @@
+<div class="container my-4 mainPage pb-5">
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let ipo of ipoList"> 
+      <div class="card p-4 shadow-sm rounded-2 border-0">
+        <div class="d-flex align-items-center mb-3">
+          <img
+            [src]="ipo.logo"
+            alt="Logo"
+            class="me-3"
+            width="40"
+            height="40"
+          />
+          <h4 class="mb-0 fw-bold text-primary ms-5">{{ ipo.company }}</h4>
+        </div>
+        <div class="row mb-2 mt-4">
+          <div class="col-4">
+            <small class="text-muted">PRICE BAND</small><br /><strong>{{
+              ipo.priceBand
+            }}</strong>
+          </div>
+          <div class="col-4">
+            <small class="text-muted">OPEN</small><br /><strong>{{
+              ipo.open
+            }}</strong>
+          </div>
+          <div class="col-4">
+            <small class="text-muted">CLOSE</small><br /><strong>{{
+              ipo.close
+            }}</strong>
+          </div>
+        </div>
+        <br />
+        <div class="row mb-2">
+          <div class="col-4">
+            <small class="text-muted">ISSUE SIZE</small><br />
+            <strong>{{ ipo.issueSize }}</strong>
+          </div>
+          <div class="col-4">
+            <small class="text-muted">ISSUE TYPE</small><br /><strong>{{
+              ipo.issueType
+            }}</strong>
+          </div>
+          <div class="col-4">
+            <small class="text-muted">LISTING DATE</small><br />
+            <strong>{{ ipo.listingDate }}</strong>
+          </div>
+        </div>
+        <div class="d-flex gap-2 mt-3">
+          <button class="btn btn-outline-primary btn-sm px-3 rounded-3">
+            RHP
+          </button>
+          <button class="btn btn-danger btn-sm px-3 rounded-3">DRHP</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+<div
+  class="container d-flex align-items-center justify-content-center min-vh-100"
+>
+  <div class="p-4 divImpo">
+    <div class="text-center mb-4">
+      <img src="assets/logo.png" alt="Bluestock Logo" height="40" />
+    </div>
+
+    <form
+      (ngSubmit)="onLogin()"
+      [formGroup]="loginForm"
+      class="d-flex flex-column align-items-center justify-content-center"
+    >
+      <strong class="mb-3">Create an account</strong>
+
+      <div class="mb-3 w-100">
+        <label for="email" class="form-label boldImp">Name</label>
+        <input
+          type="name"
+          formControlName="name"
+          class="form-control border shadow-none"
+          id="name"
+          placeholder="Name"
+        />
+      </div>
+
+      <div class="mb-3 w-100">
+        <label for="email" class="form-label boldImp">Email Address</label>
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control border shadow-none"
+          id="email"
+          placeholder="johndoe@gmail.com"
+        />
+      </div>
+
+      <div class="mb-0 d-flex justify-content-between align-items-center w-100">
+        <label for="password" class="form-label boldImp">Password</label>
+        <a href="#" class="small text-decoration-none">Forgot Password?</a>
+      </div>
+      <div class="d-flex border mb-3 rounded-2 w-100">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          formControlName="password"
+          class="form-control border-0 shadow-none"
+          id="password"
+        />
+        <button
+          type="button"
+          class="btn border-0"
+          (click)="showPassword = !showPassword"
+          title="xyz"
+        >
+          <i
+            class="bi"
+            [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"
+          ></i>
+        </button>
+      </div>
+
+      <div class="d-flex">
+        <p>By continuing, you agree to our</p>
+
+        <p class="text-primary ms-1">terms of service.</p>
+      </div>
+
+      <div
+        class="p-3 mb-3 border border-2 border-dark rounded-4 checkboxDiv w-100"
+      >
+        <input
+          type="checkbox"
+          class="form-check-input shadow-none"
+          id="robotCheck"
+          formControlName="isRobot"
+        />
+        <label class="form-check-label ms-2" for="robotCheck"
+          >I'm not a robot</label
+        >
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+
+      <div class="text-center d-inline-block my-3 text-muted smokeBg p-2">
+        or sign up with
+      </div>
+
+      <button type="button" class="btn btn-light border w-100 mb-2">
+        <img
+          src="https://img.icons8.com/color/16/000000/google-logo.png"
+          class="me-2"
+          alt="xyxyyx"
+        />
+        Continue with Google
+      </button>
+
+      <div class="text-center mt-3 d-flex fw-bold">
+        <p>Already have an account?</p>
+        <a href="#" class="text-decoration-none ms-1">Sign in here</a>
+      </div>
+    </form>
+  </div>
+</div>

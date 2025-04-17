@@ -1,0 +1,37 @@
+/* Optional: Customize dropdown arrow & icon sizes */
+.navbar-nav .nav-link i {
+  font-size: 10px;
+  margin-left: 3px;
+}
+
+/* .style="height: 35px;" */
+img{
+
+height: 35px;
+}
+
+.aLink{
+  color: rgb(182, 181, 181) !important;
+}
+
+.arrowIcon{
+  margin-top:  -15px !important;
+}
+
+.boldText{
+  font-weight: 600;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: #6c757d; /* optional: match text-muted */
+  padding: 0 0.3rem;
+  font-weight: bold;
+}
+
+
+@media (max-width: 576px) {
+  img{
+    height: 30px;
+  }
+}
